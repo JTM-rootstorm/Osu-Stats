@@ -24,7 +24,7 @@ class API_Functions{
         var URL = "https://osu.ppy.sh/api/get_user?k=b842689a894e7c825998f2f3c490409bdd287af9&u="
         
         if(userName.isEmpty){
-            let path = "./Username.txt"
+            let path = "/Users/tehguy/Documents/Username.txt"
             let readFile = (try? NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)) as? String
             if let fileContents = readFile{
                 output = fileContents as String
@@ -39,7 +39,7 @@ class API_Functions{
             }
         }
         else{
-            let path = "./Username.txt"
+            let path = "/Users/tehguy/Documents/Username.txt"
             var error = NSError(domain: "somedomain", code: 123, userInfo: nil)
             let written:Bool
             do{
@@ -50,10 +50,7 @@ class API_Functions{
                 error = error1
                 written = false
             }
-            if written{
-                
-            }
-            else{
+            if (!written) {
                 print("There was a problem: \(error)")
                 return false
             }
@@ -73,15 +70,11 @@ class API_Functions{
                 print(error?.localizedDescription)
             }
             else{
-                var error:NSError?
+                let loginData = JSON(data: data!)
                 
-                var loginData = JSON(data: data!)
-                
-                let usr: String = loginData["username"].stringValue
-                let pp_rank: String = loginData["pp_raw"].stringValue
-                
-                info.pp_rank = pp_rank
-                info.username = usr
+                info.username = loginData[0]["username"].stringValue
+                info.pp_rank = loginData[0]["pp_rank"].stringValue
+
             }
         }
         task.resume()

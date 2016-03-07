@@ -18,6 +18,7 @@
 		FD0B6C2F1C8E1B4A002760CB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */; };
 		FD0B6C321C8E1DA7002760CB /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C311C8E1DA7002760CB /* UserInfo.swift */; };
 		FD0B6C341C8E1FD6002760CB /* Username.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD0B6C331C8E1FD6002760CB /* Username.txt */; };
+		FD0B6C361C8E39EC002760CB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C351C8E39EC002760CB /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FD0B6C311C8E1DA7002760CB /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		FD0B6C331C8E1FD6002760CB /* Username.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Username.txt; path = "Osu! Stats/Username.txt"; sourceTree = "<group>"; };
+		FD0B6C351C8E39EC002760CB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				7FC67E7B1C8C99B60023E637 /* Assets.xcassets */,
 				7FC67E7D1C8C99B60023E637 /* LaunchScreen.storyboard */,
 				7FC67E801C8C99B60023E637 /* Info.plist */,
+				FD0B6C351C8E39EC002760CB /* InfoViewController.swift */,
 			);
 			path = "Osu! Stats";
 			sourceTree = "<group>";
@@ -137,7 +140,7 @@
 		7FFE54B31C8E116000FD4E33 /* Osu! API */ = {
 			isa = PBXGroup;
 			children = (
-				FD0B6C331C8E1FD6002760CB /* Username.txt */,
+				FD0B6C371C8E3C12002760CB /* Shared Assets */,
 				FD0B6C301C8E1B6D002760CB /* SwiftyJSON */,
 				7FFE54B41C8E118B00FD4E33 /* API Functions.swift */,
 				7FFE54B61C8E11BA00FD4E33 /* /api/get_user */,
@@ -175,6 +178,14 @@
 				FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */,
 			);
 			name = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		FD0B6C371C8E3C12002760CB /* Shared Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FD0B6C331C8E1FD6002760CB /* Username.txt */,
+			);
+			name = "Shared Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +327,7 @@
 				7FC67E751C8C99B60023E637 /* AppDelegate.swift in Sources */,
 				7FFE54B51C8E118B00FD4E33 /* API Functions.swift in Sources */,
 				FD0B6C321C8E1DA7002760CB /* UserInfo.swift in Sources */,
+				FD0B6C361C8E39EC002760CB /* InfoViewController.swift in Sources */,
 				FD0B6C2F1C8E1B4A002760CB /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
