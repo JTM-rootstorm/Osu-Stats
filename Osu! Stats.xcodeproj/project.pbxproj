@@ -14,7 +14,6 @@
 		7FC67E7F1C8C99B60023E637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FC67E7D1C8C99B60023E637 /* LaunchScreen.storyboard */; };
 		7FC67E8A1C8C99B60023E637 /* Osu__StatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67E891C8C99B60023E637 /* Osu__StatsTests.swift */; };
 		7FC67E951C8C99B60023E637 /* Osu__StatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67E941C8C99B60023E637 /* Osu__StatsUITests.swift */; };
-		7FC67EA51C8C9BA80023E637 /* Login Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC67EA41C8C9BA80023E637 /* Login Background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		7FC67E901C8C99B60023E637 /* Osu! StatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Osu! StatsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FC67E941C8C99B60023E637 /* Osu__StatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Osu__StatsUITests.swift; sourceTree = "<group>"; };
 		7FC67E961C8C99B60023E637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FC67EA41C8C9BA80023E637 /* Login Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Login Background.png"; path = "../../../../Desktop/Login Background.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +81,6 @@
 				7FC67E881C8C99B60023E637 /* Osu! StatsTests */,
 				7FC67E931C8C99B60023E637 /* Osu! StatsUITests */,
 				7FC67E721C8C99B60023E637 /* Products */,
-				7FC67EA21C8C9B7D0023E637 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,23 +123,6 @@
 				7FC67E961C8C99B60023E637 /* Info.plist */,
 			);
 			path = "Osu! StatsUITests";
-			sourceTree = "<group>";
-		};
-		7FC67EA21C8C9B7D0023E637 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7FC67EA31C8C9B8E0023E637 /* UI Images */,
-			);
-			name = Resources;
-			path = "Osu! Stats";
-			sourceTree = "<group>";
-		};
-		7FC67EA31C8C9B8E0023E637 /* UI Images */ = {
-			isa = PBXGroup;
-			children = (
-				7FC67EA41C8C9BA80023E637 /* Login Background.png */,
-			);
-			name = "UI Images";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +232,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FC67EA51C8C9BA80023E637 /* Login Background.png in Resources */,
 				7FC67E7F1C8C99B60023E637 /* LaunchScreen.storyboard in Resources */,
 				7FC67E7C1C8C99B60023E637 /* Assets.xcassets in Resources */,
 				7FC67E7A1C8C99B60023E637 /* Main.storyboard in Resources */,
@@ -506,6 +485,7 @@
 				7FC67E9B1C8C99B60023E637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FC67E9C1C8C99B60023E637 /* Build configuration list for PBXNativeTarget "Osu! StatsTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +494,7 @@
 				7FC67E9E1C8C99B60023E637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FC67E9F1C8C99B60023E637 /* Build configuration list for PBXNativeTarget "Osu! StatsUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +503,7 @@
 				7FC67EA11C8C99B60023E637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
