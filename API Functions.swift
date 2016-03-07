@@ -13,3 +13,11 @@
 //https://osu.ppy.sh/api/get_user?k=b842689a894e7c825998f2f3c490409bdd287af9&u=lilchancep
 
 import Foundation
+
+class API_Functions{
+    
+    class func getLoginInfo( userName:String, info:UserInfo) ->Bool{
+        var output:String = ""
+        var URL = "https://osu.ppy.sh/api/get_user?k=b842689a894e7c825998f2f3c490409bdd287af9&u="
+    }
+}
