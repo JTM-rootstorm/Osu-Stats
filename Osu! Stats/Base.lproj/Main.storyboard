@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="M97-hW-9TV">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvY-TQ-6sx" customClass="UsernameEntryBox">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <string key="placeholder">Osu! Username	</string>
@@ -64,21 +67,36 @@
                             <constraint firstItem="XXm-L7-znT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="BWx-VV-gUb">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="M97-hW-9TV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JYm-zd-zEf"/>
+                            <constraint firstItem="M97-hW-9TV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UpX-DC-Vxi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M97-hW-9TV" secondAttribute="bottom" constant="10" id="WtU-w5-ZQ4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xvY-TQ-6sx" secondAttribute="trailing" constant="80" id="ZWM-KK-LH2"/>
                             <constraint firstItem="XXm-L7-znT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zt0-XR-NiR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XXm-L7-znT" secondAttribute="trailing" constant="-10" id="ar2-Zv-rmU">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="xvY-TQ-6sx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="175" id="bPi-jf-5P8"/>
+                            <constraint firstItem="M97-hW-9TV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="dz8-ZK-p4p"/>
                             <constraint firstItem="XXm-L7-znT" firstAttribute="top" secondItem="xvY-TQ-6sx" secondAttribute="bottom" constant="68" id="mM7-xU-1hw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M97-hW-9TV" secondAttribute="trailing" constant="10" id="s7t-6l-XVe"/>
                             <constraint firstItem="xvY-TQ-6sx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="sqO-mq-OU5"/>
+                            <constraint firstItem="M97-hW-9TV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="vpP-bs-2BR"/>
+                            <constraint firstItem="M97-hW-9TV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="x7e-Kd-Z4u"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M97-hW-9TV" secondAttribute="bottom" constant="20" id="zrq-Co-kri"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="M97-hW-9TV"/>
                                 <exclude reference="xvY-TQ-6sx"/>
                                 <exclude reference="XXm-L7-znT"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="JYm-zd-zEf"/>
+                                <exclude reference="UpX-DC-Vxi"/>
+                                <exclude reference="dz8-ZK-p4p"/>
+                                <exclude reference="s7t-6l-XVe"/>
+                                <exclude reference="vpP-bs-2BR"/>
+                                <exclude reference="x7e-Kd-Z4u"/>
                                 <exclude reference="ZWM-KK-LH2"/>
                                 <exclude reference="bPi-jf-5P8"/>
                                 <exclude reference="sqO-mq-OU5"/>
@@ -87,6 +105,8 @@
                                 <exclude reference="Zt0-XR-NiR"/>
                                 <exclude reference="ar2-Zv-rmU"/>
                                 <exclude reference="mM7-xU-1hw"/>
+                                <exclude reference="WtU-w5-ZQ4"/>
+                                <exclude reference="zrq-Co-kri"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -96,7 +116,16 @@
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="M97-hW-9TV"/>
+                            </mask>
                             <mask key="constraints">
+                                <include reference="JYm-zd-zEf"/>
+                                <include reference="UpX-DC-Vxi"/>
+                                <include reference="dz8-ZK-p4p"/>
+                                <exclude reference="s7t-6l-XVe"/>
+                                <exclude reference="vpP-bs-2BR"/>
+                                <exclude reference="x7e-Kd-Z4u"/>
                                 <include reference="ZWM-KK-LH2"/>
                                 <include reference="bPi-jf-5P8"/>
                                 <include reference="sqO-mq-OU5"/>
@@ -105,6 +134,8 @@
                                 <include reference="Zt0-XR-NiR"/>
                                 <exclude reference="ar2-Zv-rmU"/>
                                 <include reference="mM7-xU-1hw"/>
+                                <exclude reference="WtU-w5-ZQ4"/>
+                                <include reference="zrq-Co-kri"/>
                             </mask>
                         </variation>
                     </view>
@@ -114,4 +145,7 @@
             <point key="canvasLocation" x="186" y="456"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LoginBackground" width="1080" height="1920"/>
+    </resources>
 </document>
