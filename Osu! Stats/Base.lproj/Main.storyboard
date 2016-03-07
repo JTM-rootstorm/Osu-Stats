@@ -40,7 +40,7 @@
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-354" y="-700" width="1109" height="1920"/>
+                                    <rect key="frame" x="170" y="242" width="60" height="30"/>
                                 </variation>
                             </button>
                         </subviews>
