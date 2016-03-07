@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -63,7 +64,9 @@
                             <accessibilityTraits key="traits" image="YES"/>
                         </accessibility>
                         <constraints>
-                            <constraint firstItem="XXm-L7-znT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5Ai-ty-VOx"/>
+                            <constraint firstItem="XXm-L7-znT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5Ai-ty-VOx">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="XXm-L7-znT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="BWx-VV-gUb">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -71,7 +74,9 @@
                             <constraint firstItem="M97-hW-9TV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UpX-DC-Vxi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M97-hW-9TV" secondAttribute="bottom" constant="10" id="WtU-w5-ZQ4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xvY-TQ-6sx" secondAttribute="trailing" constant="80" id="ZWM-KK-LH2"/>
-                            <constraint firstItem="XXm-L7-znT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zt0-XR-NiR"/>
+                            <constraint firstItem="XXm-L7-znT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zt0-XR-NiR">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="trailingMargin" secondItem="XXm-L7-znT" secondAttribute="trailing" constant="-10" id="ar2-Zv-rmU">
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -91,12 +96,8 @@
                                 <exclude reference="XXm-L7-znT"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="JYm-zd-zEf"/>
-                                <exclude reference="UpX-DC-Vxi"/>
-                                <exclude reference="dz8-ZK-p4p"/>
-                                <exclude reference="s7t-6l-XVe"/>
-                                <exclude reference="vpP-bs-2BR"/>
-                                <exclude reference="x7e-Kd-Z4u"/>
+                                <exclude reference="WtU-w5-ZQ4"/>
+                                <exclude reference="zrq-Co-kri"/>
                                 <exclude reference="ZWM-KK-LH2"/>
                                 <exclude reference="bPi-jf-5P8"/>
                                 <exclude reference="sqO-mq-OU5"/>
@@ -105,8 +106,12 @@
                                 <exclude reference="Zt0-XR-NiR"/>
                                 <exclude reference="ar2-Zv-rmU"/>
                                 <exclude reference="mM7-xU-1hw"/>
-                                <exclude reference="WtU-w5-ZQ4"/>
-                                <exclude reference="zrq-Co-kri"/>
+                                <exclude reference="JYm-zd-zEf"/>
+                                <exclude reference="UpX-DC-Vxi"/>
+                                <exclude reference="dz8-ZK-p4p"/>
+                                <exclude reference="s7t-6l-XVe"/>
+                                <exclude reference="vpP-bs-2BR"/>
+                                <exclude reference="x7e-Kd-Z4u"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -120,12 +125,8 @@
                                 <include reference="M97-hW-9TV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="JYm-zd-zEf"/>
-                                <include reference="UpX-DC-Vxi"/>
-                                <include reference="dz8-ZK-p4p"/>
-                                <exclude reference="s7t-6l-XVe"/>
-                                <exclude reference="vpP-bs-2BR"/>
-                                <exclude reference="x7e-Kd-Z4u"/>
+                                <exclude reference="WtU-w5-ZQ4"/>
+                                <include reference="zrq-Co-kri"/>
                                 <include reference="ZWM-KK-LH2"/>
                                 <include reference="bPi-jf-5P8"/>
                                 <include reference="sqO-mq-OU5"/>
@@ -134,8 +135,12 @@
                                 <include reference="Zt0-XR-NiR"/>
                                 <exclude reference="ar2-Zv-rmU"/>
                                 <include reference="mM7-xU-1hw"/>
-                                <exclude reference="WtU-w5-ZQ4"/>
-                                <include reference="zrq-Co-kri"/>
+                                <include reference="JYm-zd-zEf"/>
+                                <include reference="UpX-DC-Vxi"/>
+                                <include reference="dz8-ZK-p4p"/>
+                                <exclude reference="s7t-6l-XVe"/>
+                                <exclude reference="vpP-bs-2BR"/>
+                                <exclude reference="x7e-Kd-Z4u"/>
                             </mask>
                         </variation>
                     </view>
