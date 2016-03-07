@@ -5,6 +5,8 @@
 //  Created by Chancellor Porter on 3/7/16.
 //  Copyright © 2016 Chancellor Porter. All rights reserved.
 //
+// Official API documentation  https://github.com/ppy/osu-api/wiki
+
 
 //My Osu API Access Key is b842689a894e7c825998f2f3c490409bdd287af9&
 
