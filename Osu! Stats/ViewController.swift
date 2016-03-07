@@ -9,7 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var userInfo = UserInfo()
+    
+    @IBOutlet weak var UsernameEntryBox: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +23,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func Login(sender: UIButton) {
+        var yes = API_Functions.getLoginInfo(UsernameEntryBox.text!, info: self.userInfo)
 
-
+        print(userInfo.username)
+        print(userInfo.pp_rank)
+    }
 }
 
