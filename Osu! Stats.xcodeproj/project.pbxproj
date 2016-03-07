@@ -17,6 +17,7 @@
 		7FFE54B51C8E118B00FD4E33 /* API Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE54B41C8E118B00FD4E33 /* API Functions.swift */; };
 		FD0B6C2F1C8E1B4A002760CB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */; };
 		FD0B6C321C8E1DA7002760CB /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C311C8E1DA7002760CB /* UserInfo.swift */; };
+		FD0B6C341C8E1FD6002760CB /* Username.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD0B6C331C8E1FD6002760CB /* Username.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		7FFE54B41C8E118B00FD4E33 /* API Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API Functions.swift"; sourceTree = "<group>"; };
 		FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FD0B6C311C8E1DA7002760CB /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		FD0B6C331C8E1FD6002760CB /* Username.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Username.txt; path = "Osu! Stats/Username.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		7FFE54B31C8E116000FD4E33 /* Osu! API */ = {
 			isa = PBXGroup;
 			children = (
+				FD0B6C331C8E1FD6002760CB /* Username.txt */,
 				FD0B6C301C8E1B6D002760CB /* SwiftyJSON */,
 				7FFE54B41C8E118B00FD4E33 /* API Functions.swift */,
 				7FFE54B61C8E11BA00FD4E33 /* /api/get_user */,
@@ -283,6 +286,7 @@
 			files = (
 				7FC67E7F1C8C99B60023E637 /* LaunchScreen.storyboard in Resources */,
 				7FC67E7C1C8C99B60023E637 /* Assets.xcassets in Resources */,
+				FD0B6C341C8E1FD6002760CB /* Username.txt in Resources */,
 				7FC67E7A1C8C99B60023E637 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
