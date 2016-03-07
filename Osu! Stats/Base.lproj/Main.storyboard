@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,58 +18,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="X0E-6u-p97">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="20" width="360" height="560"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="20" width="360" height="760"/>
-                                </variation>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SqB-nS-JbO">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Go!"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="185" y="280" width="30" height="30"/>
-                                </variation>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvY-TQ-6sx" customClass="UsernameEntryBox">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvY-TQ-6sx" customClass="UsernameEntryBox">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <string key="placeholder">Osu! Username	</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="100" y="148" width="200" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXm-L7-znT">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.041046944598614132" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cym-gt-MQd"/>
+                                    <constraint firstAttribute="height" constant="30" id="j8d-1x-0UN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                <state key="normal" title="Go!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cym-gt-MQd"/>
+                                        <exclude reference="j8d-1x-0UN"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="285" width="400" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="cym-gt-MQd"/>
+                                        <include reference="j8d-1x-0UN"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" image="YES"/>
                         </accessibility>
+                        <constraints>
+                            <constraint firstItem="XXm-L7-znT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5Ai-ty-VOx"/>
+                            <constraint firstItem="XXm-L7-znT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="BWx-VV-gUb">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="xvY-TQ-6sx" secondAttribute="trailing" constant="80" id="ZWM-KK-LH2"/>
+                            <constraint firstItem="XXm-L7-znT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zt0-XR-NiR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XXm-L7-znT" secondAttribute="trailing" constant="-10" id="ar2-Zv-rmU">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="xvY-TQ-6sx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="175" id="bPi-jf-5P8"/>
+                            <constraint firstItem="XXm-L7-znT" firstAttribute="top" secondItem="xvY-TQ-6sx" secondAttribute="bottom" constant="68" id="mM7-xU-1hw"/>
+                            <constraint firstItem="xvY-TQ-6sx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="sqO-mq-OU5"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="X0E-6u-p97"/>
-                                <exclude reference="SqB-nS-JbO"/>
                                 <exclude reference="xvY-TQ-6sx"/>
+                                <exclude reference="XXm-L7-znT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ZWM-KK-LH2"/>
+                                <exclude reference="bPi-jf-5P8"/>
+                                <exclude reference="sqO-mq-OU5"/>
+                                <exclude reference="5Ai-ty-VOx"/>
+                                <exclude reference="BWx-VV-gUb"/>
+                                <exclude reference="Zt0-XR-NiR"/>
+                                <exclude reference="ar2-Zv-rmU"/>
+                                <exclude reference="mM7-xU-1hw"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="X0E-6u-p97"/>
-                                <include reference="SqB-nS-JbO"/>
                                 <include reference="xvY-TQ-6sx"/>
+                                <include reference="XXm-L7-znT"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="ZWM-KK-LH2"/>
+                                <include reference="bPi-jf-5P8"/>
+                                <include reference="sqO-mq-OU5"/>
+                                <include reference="5Ai-ty-VOx"/>
+                                <exclude reference="BWx-VV-gUb"/>
+                                <include reference="Zt0-XR-NiR"/>
+                                <exclude reference="ar2-Zv-rmU"/>
+                                <include reference="mM7-xU-1hw"/>
                             </mask>
                         </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="186" y="456.75"/>
+            <point key="canvasLocation" x="186" y="456"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="LoginBackground" width="1080" height="1920"/>
-    </resources>
 </document>
