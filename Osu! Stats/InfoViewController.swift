@@ -12,11 +12,15 @@ class InfoViewController: UIViewController {
         
     @IBOutlet weak var lbl_username: UILabel!
     @IBOutlet weak var lbl_pprank: UILabel!
+    @IBOutlet weak var lbl_level: UILabel!
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         LoadUserInfo()
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -47,7 +51,9 @@ class InfoViewController: UIViewController {
             dispatch_async(dispatch_get_main_queue()){
                 self.lbl_username.text = UserInfo.username
                 self.lbl_pprank.text = UserInfo.pp_rank
+                self.lbl_level.text = UserInfo.level
             }
         }
     }
+    
 }

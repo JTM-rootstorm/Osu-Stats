@@ -219,10 +219,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z1I-mF-Q5Y">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z1I-mF-Q5Y">
                                 <rect key="frame" x="0.0" y="8" width="271" height="128"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9G-qa-6z5" userLabel="Logout">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9G-qa-6z5" userLabel="Logout">
                                         <rect key="frame" x="20" y="20" width="58" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="104" id="YYP-oY-TWQ"/>
@@ -242,13 +242,13 @@
                                             <segue destination="BYZ-38-t0r" kind="show" id="VGS-BH-Nka"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3Y-4O-y7h">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3Y-4O-y7h">
                                         <rect key="frame" x="28" y="58" width="88" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVz-Q3-egr" userLabel="lbl_username">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVz-Q3-egr" userLabel="lbl_username">
                                         <rect key="frame" x="135" y="58" width="116" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="116" id="2NM-hY-Oqa"/>
@@ -267,16 +267,22 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtM-n2-qqQ" userLabel="lbl_pprank">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtM-n2-qqQ" userLabel="lbl_pprank">
                                         <rect key="frame" x="135" y="87" width="116" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Global Rank:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMn-sg-tVN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Global Rank:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMn-sg-tVN">
                                         <rect key="frame" x="28" y="87" width="88" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e88-tu-RKO" userLabel="lbl_level">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -290,6 +296,8 @@
                                     <constraint firstItem="g3Y-4O-y7h" firstAttribute="leading" secondItem="z1I-mF-Q5Y" secondAttribute="leading" constant="12" id="Gdc-BY-utK"/>
                                     <constraint firstItem="TMn-sg-tVN" firstAttribute="centerX" secondItem="g3Y-4O-y7h" secondAttribute="centerX" id="PSB-Ka-0PX"/>
                                     <constraint firstItem="PVz-Q3-egr" firstAttribute="leading" secondItem="z1I-mF-Q5Y" secondAttribute="leading" constant="276" id="QbF-7i-SzK"/>
+                                    <constraint firstItem="e88-tu-RKO" firstAttribute="top" secondItem="z1I-mF-Q5Y" secondAttribute="top" constant="235" id="Tf4-OW-OXv"/>
+                                    <constraint firstItem="e88-tu-RKO" firstAttribute="centerX" secondItem="E9G-qa-6z5" secondAttribute="centerX" id="XfO-xK-jaC"/>
                                     <constraint firstItem="mtM-n2-qqQ" firstAttribute="trailing" secondItem="PVz-Q3-egr" secondAttribute="trailing" id="ZWT-xU-eBm"/>
                                     <constraint firstAttribute="bottom" secondItem="TMn-sg-tVN" secondAttribute="bottom" constant="663" id="Zal-8v-bk4"/>
                                     <constraint firstItem="TMn-sg-tVN" firstAttribute="top" secondItem="g3Y-4O-y7h" secondAttribute="bottom" constant="8" symbolic="YES" id="jJh-3h-9g2"/>
@@ -299,6 +307,9 @@
                                     <constraint firstItem="g3Y-4O-y7h" firstAttribute="baseline" secondItem="PVz-Q3-egr" secondAttribute="baseline" id="yTP-bd-IWc"/>
                                 </constraints>
                                 <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="e88-tu-RKO"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <exclude reference="AqI-Eb-ICE"/>
                                         <exclude reference="Gdc-BY-utK"/>
@@ -316,9 +327,14 @@
                                         <exclude reference="8TB-Fd-Bz3"/>
                                         <exclude reference="ZWT-xU-eBm"/>
                                         <exclude reference="jvc-vL-Sts"/>
+                                        <exclude reference="Tf4-OW-OXv"/>
+                                        <exclude reference="XfO-xK-jaC"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="e88-tu-RKO"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <include reference="AqI-Eb-ICE"/>
                                         <include reference="Gdc-BY-utK"/>
@@ -336,6 +352,8 @@
                                         <include reference="8TB-Fd-Bz3"/>
                                         <include reference="ZWT-xU-eBm"/>
                                         <include reference="jvc-vL-Sts"/>
+                                        <include reference="Tf4-OW-OXv"/>
+                                        <include reference="XfO-xK-jaC"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -365,13 +383,14 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="lbl_level" destination="e88-tu-RKO" id="oZ4-Yz-35h"/>
                         <outlet property="lbl_pprank" destination="mtM-n2-qqQ" id="YH1-YH-ltc"/>
                         <outlet property="lbl_username" destination="PVz-Q3-egr" id="7wx-Xt-OnZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uV-Ul-02C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="456"/>
+            <point key="canvasLocation" x="925.5" y="374.25"/>
         </scene>
     </scenes>
     <resources>
