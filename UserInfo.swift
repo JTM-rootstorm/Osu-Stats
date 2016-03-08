@@ -12,9 +12,12 @@
 import Foundation
 class UserInfo{
 <<<<<<< HEAD
+<<<<<<< HEAD
     static var username = "lilchancep", pp_rank = "p"
 }
 =======
+=======
+>>>>>>> lilchancep/master
     
     var username = ""
     
@@ -51,5 +54,9 @@ class UserInfo{
     var pp_country_rank = ""
 }
 
+<<<<<<< HEAD
+//does not include events}
+>>>>>>> lilchancep/master
+=======
 //does not include events}
 >>>>>>> lilchancep/master
