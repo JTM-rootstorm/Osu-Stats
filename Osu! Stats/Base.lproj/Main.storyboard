@@ -61,6 +61,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGa-HI-UaX"/>
                                     <segue destination="xa8-W8-1hw" kind="show" id="zJC-A6-YMZ"/>
                                 </connections>
                             </button>
@@ -197,6 +198,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="GoButton" destination="XXm-L7-znT" id="KRM-gP-8cn"/>
                         <outlet property="UsernameEntryBox" destination="xvY-TQ-6sx" id="26d-xU-92z"/>
                     </connections>
                 </viewController>
