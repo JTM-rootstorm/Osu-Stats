@@ -17,14 +17,14 @@
 
 import Foundation
 
-class API_Functions{
+class API_Functions: InfoViewController{
     
-    class func getLoginInfo( userName:String, info:UserInfo) ->Bool{
+    class func getLoginInfo(completionHandler: (jData: JSON)->()) ->Bool{
         var output:String = ""
         var URL = "https://osu.ppy.sh/api/get_user?k=b842689a894e7c825998f2f3c490409bdd287af9&u="
         
-        if(userName.isEmpty){
-            let path = "/Users/tehguy/Documents/Username.txt"
+        if(UserInfo.username.isEmpty){
+            let path = NSString(string: "~/Documents/Username.txt").stringByExpandingTildeInPath
             let readFile = (try? NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)) as? String
             if let fileContents = readFile{
                 output = fileContents as String
@@ -39,11 +39,11 @@ class API_Functions{
             }
         }
         else{
-            let path = "/Users/tehguy/Documents/Username.txt"
+            let path = NSString(string: "~/Documents/Username.txt").stringByExpandingTildeInPath
             var error = NSError(domain: "somedomain", code: 123, userInfo: nil)
             let written:Bool
             do{
-                try userName.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding)
+                try UserInfo.username.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding)
                 written = true
             }
             catch let error1 as NSError{
@@ -55,27 +55,18 @@ class API_Functions{
                 return false
             }
             
-            output = userName;
+            output = UserInfo.username;
         }
         
         URL = URL + output
         
         let session = NSURLSession.sharedSession()
-        let loginURL = NSURL(string: URL)
-        
-        let task = session.dataTaskWithURL(loginURL!){
-            (data, response, error) -> Void in
-            
-            if error != nil{
-                print(error?.localizedDescription)
-            }
-            else{
-                let loginData = JSON(data: data!)
-                
-                info.username = loginData[0]["username"].stringValue
-                info.pp_rank = loginData[0]["pp_rank"].stringValue
+        let loginURL = NSURL(string: URL)!
 
-            }
+        let task = session.dataTaskWithURL(loginURL){(data, response, error) -> Void in
+            let loginData = JSON(data: data!)
+            
+            completionHandler(jData: loginData)
         }
         task.resume()
         
