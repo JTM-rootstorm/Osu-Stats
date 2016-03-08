@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func Login(sender: UIButton) {
-        API_Functions.getLoginInfo(UsernameEntryBox.text!, info: self.userInfo)
+        var yes = API_Functions.getLoginInfo(UsernameEntryBox.text!, info: self.userInfo)
 
         print(userInfo.username)
         print(userInfo.pp_rank)
