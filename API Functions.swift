@@ -17,7 +17,7 @@
 
 import Foundation
 
-class API_Functions: InfoViewController{
+class API_Functions{
     
     class func getLoginInfo(completionHandler: (jData: JSON)->()) ->Bool{
         var output:String = ""
