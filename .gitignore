@@ -4,3 +4,5 @@
 *.xcscheme
 
 Osu! Stats.xcodeproj/xcuserdata/tehguy.xcuserdatad/xcschemes/xcschememanagement.plist
+
+*.xcuserstate
