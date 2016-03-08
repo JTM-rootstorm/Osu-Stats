@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var UsernameEntryBox: UITextField!
     @IBOutlet weak var GoButton: UIButton!
     @IBOutlet weak var UsernameEntryBox: UITextField!
     
