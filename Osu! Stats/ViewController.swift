@@ -12,10 +12,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var UsernameEntryBox: UITextField!
     @IBOutlet weak var GoButton: UIButton!
+    @IBOutlet weak var UsernameEntryBox: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        UsernameEntryBox.text = API_Functions.autoPopUsername()
     }
 
     override func didReceiveMemoryWarning() {

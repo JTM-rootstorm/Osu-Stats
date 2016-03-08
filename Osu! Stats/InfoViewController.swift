@@ -35,7 +35,11 @@ class InfoViewController: UIViewController {
             UserInfo.setRankedScore(jData[0]["ranked_score"].stringValue)
             UserInfo.setTotalScore(jData[0]["total_score"].stringValue)
             UserInfo.setPPRank(jData[0]["pp_rank"].stringValue)
+<<<<<<< HEAD
             UserInfo.setLevel(jData[0]["level"].stringValue)
+=======
+            UserInfo.setLevel(jData[0]["levl"].stringValue)
+>>>>>>> origin/master
             UserInfo.setPPRaw(jData[0]["pp_raw"].stringValue)
             UserInfo.setAccuracy(jData[0]["accuracy"].stringValue)
             UserInfo.setCountRankSS(jData[0]["count_rank_ss"].stringValue)
