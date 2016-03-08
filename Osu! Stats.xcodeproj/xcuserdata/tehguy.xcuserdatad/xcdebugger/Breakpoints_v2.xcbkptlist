@@ -22,49 +22,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UserInfo.swift"
-            timestampString = "479100369.207316"
+            timestampString = "479110518.722639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
             landmarkName = "UserInfo"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Osu__Stats.UserInfo.__deallocating_deinit"
-                  moduleName = "Osu! Stats"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tehguy/Desktop/Osu-Stats/UserInfo.swift"
-                  timestampString = "479100551.508225"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Osu__Stats.UserInfo.deinit"
-                  moduleName = "Osu! Stats"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tehguy/Desktop/Osu-Stats/UserInfo.swift"
-                  timestampString = "479100551.508373"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "8">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
