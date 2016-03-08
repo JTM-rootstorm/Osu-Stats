@@ -21,5 +21,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+<<<<<<< HEAD
+=======
+    
+    @IBAction func Login(sender: UIButton) {
+        API_Functions.getLoginInfo(UsernameEntryBox.text!, info: self.userInfo)
+
+        print(userInfo.username)
+        print(userInfo.pp_rank)
+    }
+>>>>>>> lilchancep/master
 }
 
