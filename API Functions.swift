@@ -24,9 +24,8 @@ class API_Functions: InfoViewController{
         var URL = "https://osu.ppy.sh/api/get_user?k=b842689a894e7c825998f2f3c490409bdd287af9&u="
         
         if(UserInfo.username.isEmpty){
-            let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
-            let readPath = NSString(string: path).stringByAppendingPathComponent("Username.txt")
-            let readFile = (try? NSString(contentsOfFile: readPath, encoding: NSUTF8StringEncoding)) as? String
+            let path = NSString(string: "~/Documents/Username.txt").stringByExpandingTildeInPath
+            let readFile = (try? NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)) as? String
             if let fileContents = readFile{
                 output = fileContents as String
             }
@@ -41,13 +40,11 @@ class API_Functions: InfoViewController{
             output = readFromFile(output)
         }
         else{
-            let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] 
-            let writePath = NSString(string: path).stringByAppendingPathComponent("Username.txt")
+            let path = NSString(string: "~/Documents/Username.txt").stringByExpandingTildeInPath
             var error = NSError(domain: "somedomain", code: 123, userInfo: nil)
             let written:Bool
             do{
-                try UserInfo.username.writeToFile(writePath, atomically: true, encoding: NSUTF8StringEncoding)
-                print(writePath)
+                try UserInfo.username.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding)
                 written = true
             }
             catch let error1 as NSError{
