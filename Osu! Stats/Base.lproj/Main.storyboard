@@ -279,14 +279,11 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pac-iu-jMV">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e88-tu-RKO" userLabel="lbl_level">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="267" y="129" width="89" height="48"/>
-                                        </variation>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -299,6 +296,8 @@
                                     <constraint firstItem="g3Y-4O-y7h" firstAttribute="leading" secondItem="z1I-mF-Q5Y" secondAttribute="leading" constant="12" id="Gdc-BY-utK"/>
                                     <constraint firstItem="TMn-sg-tVN" firstAttribute="centerX" secondItem="g3Y-4O-y7h" secondAttribute="centerX" id="PSB-Ka-0PX"/>
                                     <constraint firstItem="PVz-Q3-egr" firstAttribute="leading" secondItem="z1I-mF-Q5Y" secondAttribute="leading" constant="276" id="QbF-7i-SzK"/>
+                                    <constraint firstItem="e88-tu-RKO" firstAttribute="top" secondItem="z1I-mF-Q5Y" secondAttribute="top" constant="235" id="Tf4-OW-OXv"/>
+                                    <constraint firstItem="e88-tu-RKO" firstAttribute="centerX" secondItem="E9G-qa-6z5" secondAttribute="centerX" id="XfO-xK-jaC"/>
                                     <constraint firstItem="mtM-n2-qqQ" firstAttribute="trailing" secondItem="PVz-Q3-egr" secondAttribute="trailing" id="ZWT-xU-eBm"/>
                                     <constraint firstAttribute="bottom" secondItem="TMn-sg-tVN" secondAttribute="bottom" constant="663" id="Zal-8v-bk4"/>
                                     <constraint firstItem="TMn-sg-tVN" firstAttribute="top" secondItem="g3Y-4O-y7h" secondAttribute="bottom" constant="8" symbolic="YES" id="jJh-3h-9g2"/>
@@ -309,11 +308,9 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="pac-iu-jMV"/>
+                                        <exclude reference="e88-tu-RKO"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="AVr-qQ-iPd"/>
-                                        <exclude reference="unO-Td-QdF"/>
                                         <exclude reference="AqI-Eb-ICE"/>
                                         <exclude reference="Gdc-BY-utK"/>
                                         <exclude reference="ms8-xh-gTy"/>
@@ -323,20 +320,22 @@
                                         <exclude reference="PSB-Ka-0PX"/>
                                         <exclude reference="Zal-8v-bk4"/>
                                         <exclude reference="jJh-3h-9g2"/>
+                                        <exclude reference="AVr-qQ-iPd"/>
+                                        <exclude reference="unO-Td-QdF"/>
                                         <exclude reference="QbF-7i-SzK"/>
                                         <exclude reference="5cL-PJ-KjU"/>
                                         <exclude reference="8TB-Fd-Bz3"/>
                                         <exclude reference="ZWT-xU-eBm"/>
                                         <exclude reference="jvc-vL-Sts"/>
+                                        <exclude reference="Tf4-OW-OXv"/>
+                                        <exclude reference="XfO-xK-jaC"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="subviews">
-                                        <include reference="pac-iu-jMV"/>
+                                        <include reference="e88-tu-RKO"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="AVr-qQ-iPd"/>
-                                        <include reference="unO-Td-QdF"/>
                                         <include reference="AqI-Eb-ICE"/>
                                         <include reference="Gdc-BY-utK"/>
                                         <include reference="ms8-xh-gTy"/>
@@ -346,11 +345,15 @@
                                         <include reference="PSB-Ka-0PX"/>
                                         <include reference="Zal-8v-bk4"/>
                                         <include reference="jJh-3h-9g2"/>
+                                        <include reference="AVr-qQ-iPd"/>
+                                        <include reference="unO-Td-QdF"/>
                                         <include reference="QbF-7i-SzK"/>
                                         <include reference="5cL-PJ-KjU"/>
                                         <include reference="8TB-Fd-Bz3"/>
                                         <include reference="ZWT-xU-eBm"/>
                                         <include reference="jvc-vL-Sts"/>
+                                        <include reference="Tf4-OW-OXv"/>
+                                        <include reference="XfO-xK-jaC"/>
                                     </mask>
                                 </variation>
                             </scrollView>
@@ -380,15 +383,14 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="lbl_level" destination="pac-iu-jMV" id="iZY-zI-3zr"/>
+                        <outlet property="lbl_level" destination="e88-tu-RKO" id="oZ4-Yz-35h"/>
                         <outlet property="lbl_pprank" destination="mtM-n2-qqQ" id="YH1-YH-ltc"/>
                         <outlet property="lbl_username" destination="PVz-Q3-egr" id="7wx-Xt-OnZ"/>
-                        <outlet property="level" destination="pac-iu-jMV" id="kec-4j-F4u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uV-Ul-02C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="456"/>
+            <point key="canvasLocation" x="925.5" y="374.25"/>
         </scene>
     </scenes>
     <resources>
