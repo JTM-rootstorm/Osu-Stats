@@ -38,7 +38,7 @@ class API_Functions{
         
         let session = NSURLSession.sharedSession()
         let loginURL = NSURL(string: URL)!
-
+        
         let task = session.dataTaskWithURL(loginURL){(data, response, error) -> Void in
             let loginData = JSON(data: data!)
             
