@@ -9,5 +9,5 @@
 import Foundation
 
 class UserInfo{
-    var username = "", pp_rank = ""
+    static var username = "lilchancep", pp_rank = "p"
 }

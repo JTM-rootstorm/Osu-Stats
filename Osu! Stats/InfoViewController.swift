@@ -9,10 +9,7 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-    
-    var userInfo = UserInfo()
-    
-    
+        
     @IBOutlet weak var lbl_username: UILabel!
     @IBOutlet weak var lbl_pprank: UILabel!
     
@@ -27,8 +24,9 @@ class InfoViewController: UIViewController {
     
     func LoadUserInfo() {
         print("function called")
-        API_Functions.getLoginInfo("lilchancep", info: self.userInfo)
-
-        self.lbl_username.text = userInfo.username
+        API_Functions.getLoginInfo{
+            jData in
+            print("VC: \(jData)")
+        }
     }
 }

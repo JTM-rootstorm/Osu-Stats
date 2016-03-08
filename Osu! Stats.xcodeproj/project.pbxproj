@@ -146,7 +146,6 @@
 				7FFE54B61C8E11BA00FD4E33 /* /api/get_user */,
 				7FFE54B81C8E11DB00FD4E33 /* /api/get_user_best */,
 				7FFE54B71C8E11D200FD4E33 /* /api/get_scores */,
-				FD0B6C311C8E1DA7002760CB /* UserInfo.swift */,
 			);
 			name = "Osu! API";
 			sourceTree = "<group>";
@@ -154,6 +153,7 @@
 		7FFE54B61C8E11BA00FD4E33 /* /api/get_user */ = {
 			isa = PBXGroup;
 			children = (
+				FD0B6C311C8E1DA7002760CB /* UserInfo.swift */,
 			);
 			name = /api/get_user;
 			sourceTree = "<group>";
