@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     @IBAction func Login(sender: UIButton){
         UserInfo.setUsername(UsernameEntryBox.text!)
+        UsernameEntryBox.text = ""
     }
 }
 
