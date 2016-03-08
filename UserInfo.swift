@@ -9,8 +9,23 @@
 import Foundation
 
 class UserInfo{
-    static var userID = "", username = "", count300 = "", count100 = "", count50 = "", playCount = "", ranked_score = "", total_score = ""
-    static var pp_rank = "", level = "", pp_raw = "", accuracy = "", count_rank_ss = "", count_rank_s = "", count_rank_a = "", country = "", pp_country_rank = ""
+    static var userID = ""
+    static var username = ""
+    static var count300 = ""
+    static var count100 = ""
+    static var count50 = ""
+    static var playCount = ""
+    static var ranked_score = ""
+    static var total_score = ""
+    static var pp_rank = ""
+    static var level = ""
+    static var pp_raw = ""
+    static var accuracy = ""
+    static var count_rank_ss = ""
+    static var count_rank_s = ""
+    static var count_rank_a = ""
+    static var country = ""
+    static var pp_country_rank = ""
     
     class func setUserID(usr:String){
         userID = usr
