@@ -26,7 +26,15 @@ class InfoViewController: UIViewController {
         print("function called")
         API_Functions.getLoginInfo{
             jData in
-            print("VC: \(jData)")
+            //print("VC: \(jData)")
+            
+            UserInfo.setUsername(jData[0]["username"].stringValue)
+            UserInfo.setPPRank(jData[0]["pp_rank"].stringValue)
+            
+            dispatch_async(dispatch_get_main_queue()){
+                self.lbl_username.text = UserInfo.getUsername()
+                self.lbl_pprank.text = UserInfo.getPPRank()
+            }
         }
     }
 }
