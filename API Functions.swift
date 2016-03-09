@@ -19,9 +19,11 @@ import Foundation
 
 class API_Functions{
     
-    class func getLoginInfo(completionHandler: (jData: JSON)->()) ->Bool{
+    private static var key = "?k=b842689a894e7c825998f2f3c490409bdd287af9&u="
+    
+    class func getAPICall(api: String, completionHandler: (jData: JSON)->()) ->Bool{
         var output:String = ""
-        var URL = "https://osu.ppy.sh/api/get_user?k=b842689a894e7c825998f2f3c490409bdd287af9&u="
+        var URL = NSString(string:"https://osu.ppy.sh/api/").stringByAppendingString(api).stringByAppendingString(self.key)
         
         if(UserInfo.username.isEmpty){
             output = readFromFile(output)

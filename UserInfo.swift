@@ -63,8 +63,8 @@ class UserInfo{
         pp_rank = pp
     }
     
-    class func setLevel(level:String){
-        self.level = level
+    class func setLevel(lvl:String){
+        level = lvl
     }
     
     class func setPPRaw(pp:String){
