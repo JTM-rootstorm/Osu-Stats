@@ -12,9 +12,6 @@ class InfoViewController: UIViewController {
         
     @IBOutlet weak var lbl_username: UILabel!
     @IBOutlet weak var lbl_pprank: UILabel!
-    @IBOutlet weak var lbl_level: UILabel!
-
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +24,7 @@ class InfoViewController: UIViewController {
     }
     
     func LoadUserInfo() {
-        API_Functions.getLoginInfo{
+        API_Functions.getAPICall("get_user?"){
             jData in
             
             UserInfo.setUserID(jData[0]["user_id"].stringValue)
@@ -51,7 +48,6 @@ class InfoViewController: UIViewController {
             dispatch_async(dispatch_get_main_queue()){
                 self.lbl_username.text = UserInfo.username
                 self.lbl_pprank.text = UserInfo.pp_rank
-                self.lbl_level.text = UserInfo.level
             }
         }
     }
