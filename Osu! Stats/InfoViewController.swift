@@ -24,7 +24,7 @@ class InfoViewController: UIViewController {
     }
     
     func LoadUserInfo() {
-        API_Functions.getAPICall("get_user?"){
+        API_Functions.getAPICall("get_user"){
             jData in
             
             UserInfo.setUserID(jData[0]["user_id"].stringValue)

@@ -19,7 +19,7 @@ import Foundation
 
 class API_Functions{
     
-    private static var key = "k=b842689a894e7c825998f2f3c490409bdd287af9&u="
+    private static var key = "?k=b842689a894e7c825998f2f3c490409bdd287af9&u="
     
     class func getAPICall(api: String, completionHandler: (jData: JSON)->()) ->Bool{
         var output:String = ""
