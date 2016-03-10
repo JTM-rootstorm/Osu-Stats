@@ -51,6 +51,7 @@ class API_Functions{
                     
                     dispatch_async(dispatch_get_global_queue(priority, 0)){
                         self.user = User(json: data)
+                        userToJSONFile()
                         validUser = true
                         dispatch_semaphore_signal(semaphore)
                     }
@@ -109,6 +110,23 @@ class API_Functions{
         }
         if (!written) {
             print("There was a problem: \(error)")
+            return false
+        }
+        
+        return true
+    }
+    
+    class func userToJSONFile() ->Bool{
+        let userFile = NSString(string: user.username).stringByAppendingString(".JSON")
+        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
+        let writePath = NSString(string: path).stringByAppendingPathComponent(userFile)
+        
+        do{
+            try user.toJsonString().writeToFile(writePath, atomically: true, encoding: NSUTF8StringEncoding)
+            print(writePath)
+        }
+        catch let error1 as NSError{
+            print("Error: \(error1)")
             return false
         }
         

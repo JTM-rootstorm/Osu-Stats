@@ -73,7 +73,6 @@
 		FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FD0B6C331C8E1FD6002760CB /* Username.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Username.txt; path = "Osu! Stats/Username.txt"; sourceTree = "<group>"; };
 		FD0B6C351C8E39EC002760CB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		FD8127091C913F3700F7CACA /* EVReflection LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = "EVReflection LICENSE"; path = "lib/EVReflection LICENSE"; sourceTree = "<group>"; };
 		FD81270A1C9153D000F7CACA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,18 +220,9 @@
 		FD8127011C91380000F7CACA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FD8127021C91388D00F7CACA /* Licenses */,
 				4CF86BD8E4B46789744F4707 /* Pods_Osu__Stats.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FD8127021C91388D00F7CACA /* Licenses */ = {
-			isa = PBXGroup;
-			children = (
-				FD8127091C913F3700F7CACA /* EVReflection LICENSE */,
-			);
-			name = Licenses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -573,15 +563,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Osu!",
 					Stats,
-					"$(PROJECT_DIR)/Osu!",
-					Stats,
-					"$(PROJECT_DIR)/Osu!",
-					Stats,
-					"$(PROJECT_DIR)/Osu!",
-					Stats,
-					"$(PROJECT_DIR)/lib",
 				);
 				INFOPLIST_FILE = "Osu! Stats/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lilchancep.Osu--Stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -599,15 +583,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Osu!",
 					Stats,
-					"$(PROJECT_DIR)/Osu!",
-					Stats,
-					"$(PROJECT_DIR)/Osu!",
-					Stats,
-					"$(PROJECT_DIR)/Osu!",
-					Stats,
-					"$(PROJECT_DIR)/lib",
 				);
 				INFOPLIST_FILE = "Osu! Stats/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lilchancep.Osu--Stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";

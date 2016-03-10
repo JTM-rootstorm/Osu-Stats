@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         API_Functions.APICall("get_user")
         
         if(API_Functions.validUser){
-            UsernameEntryBox.text = ""
             performSegueWithIdentifier("toMainStats", sender: self)
         }
         else{
