@@ -29,9 +29,9 @@ class ViewController: UIViewController {
     
     @IBAction func Login(sender: UIButton){
         API_Functions.getUser().username = (UsernameEntryBox.text!)
-        API_Functions.LoadUserInfo("get_user")
+        API_Functions.APICall("get_user")
         
-        if(!API_Functions.getUser().user_id.isEmpty){
+        if(API_Functions.validUser){
             UsernameEntryBox.text = ""
             performSegueWithIdentifier("toMainStats", sender: self)
         }
