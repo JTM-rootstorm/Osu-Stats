@@ -27,23 +27,25 @@ class InfoViewController: UIViewController {
         API_Functions.getAPICall("get_user"){
             jData in
             
-            UserInfo.setUserID(jData[0]["user_id"].stringValue)
-            UserInfo.setUsername(jData[0]["username"].stringValue)
-            UserInfo.setCount300(jData[0]["count300"].stringValue)
-            UserInfo.setCount100(jData[0]["count100"].stringValue)
-            UserInfo.setCount50(jData[0]["count50"].stringValue)
-            UserInfo.setPlayCount(jData[0]["playcount"].stringValue)
-            UserInfo.setRankedScore(jData[0]["ranked_score"].stringValue)
-            UserInfo.setTotalScore(jData[0]["total_score"].stringValue)
-            UserInfo.setPPRank(jData[0]["pp_rank"].stringValue)
-            UserInfo.setLevel(jData[0]["level"].stringValue)
-            UserInfo.setPPRaw(jData[0]["pp_raw"].stringValue)
-            UserInfo.setAccuracy(jData[0]["accuracy"].stringValue)
-            UserInfo.setCountRankSS(jData[0]["count_rank_ss"].stringValue)
-            UserInfo.setCountRankS(jData[0]["count_rank_s"].stringValue)
-            UserInfo.setCountRankA(jData[0]["count_rank_a"].stringValue)
-            UserInfo.setCountry(jData[0]["country"].stringValue)
-            UserInfo.setPPCountryRank(jData[0]["pp_country_rank"].stringValue)
+            if (!jData.isEmpty){
+                UserInfo.setUserID(jData[0]["user_id"].stringValue)
+                UserInfo.setUsername(jData[0]["username"].stringValue)
+                UserInfo.setCount300(jData[0]["count300"].stringValue)
+                UserInfo.setCount100(jData[0]["count100"].stringValue)
+                UserInfo.setCount50(jData[0]["count50"].stringValue)
+                UserInfo.setPlayCount(jData[0]["playcount"].stringValue)
+                UserInfo.setRankedScore(jData[0]["ranked_score"].stringValue)
+                UserInfo.setTotalScore(jData[0]["total_score"].stringValue)
+                UserInfo.setPPRank(jData[0]["pp_rank"].stringValue)
+                UserInfo.setLevel(jData[0]["level"].stringValue)
+                UserInfo.setPPRaw(jData[0]["pp_raw"].stringValue)
+                UserInfo.setAccuracy(jData[0]["accuracy"].stringValue)
+                UserInfo.setCountRankSS(jData[0]["count_rank_ss"].stringValue)
+                UserInfo.setCountRankS(jData[0]["count_rank_s"].stringValue)
+                UserInfo.setCountRankA(jData[0]["count_rank_a"].stringValue)
+                UserInfo.setCountry(jData[0]["country"].stringValue)
+                UserInfo.setPPCountryRank(jData[0]["pp_country_rank"].stringValue)
+            }
             
             dispatch_async(dispatch_get_main_queue()){
                 self.lbl_username.text = UserInfo.username
