@@ -19,8 +19,6 @@
 		FD0B6C2F1C8E1B4A002760CB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */; };
 		FD0B6C341C8E1FD6002760CB /* Username.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD0B6C331C8E1FD6002760CB /* Username.txt */; };
 		FD0B6C361C8E39EC002760CB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C351C8E39EC002760CB /* InfoViewController.swift */; };
-		FD6167FE1C91F75F00422245 /* APIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD155CA31C90F66D00CB211E /* APIFramework.framework */; };
-		FD6167FF1C91F75F00422245 /* APIFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD155CA31C90F66D00CB211E /* APIFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FD81270B1C9153D000F7CACA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81270A1C9153D000F7CACA /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +46,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FD6167FF1C91F75F00422245 /* APIFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,7 +73,6 @@
 		FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FD0B6C331C8E1FD6002760CB /* Username.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Username.txt; path = "Osu! Stats/Username.txt"; sourceTree = "<group>"; };
 		FD0B6C351C8E39EC002760CB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		FD155CA31C90F66D00CB211E /* APIFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIFramework.framework; path = lib/APIFramework.framework; sourceTree = "<group>"; };
 		FD8127091C913F3700F7CACA /* EVReflection LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = "EVReflection LICENSE"; path = "lib/EVReflection LICENSE"; sourceTree = "<group>"; };
 		FD81270A1C9153D000F7CACA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD6167FE1C91F75F00422245 /* APIFramework.framework in Frameworks */,
 				31B7B6DEDB56A8250A26403A /* Pods_Osu__Stats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				FD8127021C91388D00F7CACA /* Licenses */,
-				FD155CA31C90F66D00CB211E /* APIFramework.framework */,
 				4CF86BD8E4B46789744F4707 /* Pods_Osu__Stats.framework */,
 			);
 			name = Frameworks;

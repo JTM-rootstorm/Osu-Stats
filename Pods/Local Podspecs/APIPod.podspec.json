@@ -1,0 +1,25 @@
+{
+  "name": "APIPod",
+  "version": "0.1.0",
+  "summary": "Holds API key for OSU",
+  "description": "Holds API key for OSU!",
+  "homepage": "https://github.com/tehguy/APIPod",
+  "license": "MIT",
+  "authors": {
+    "Michael Justman": "iamtehguy@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/tehguy/APIPod.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*.swift",
+  "resource_bundles": {
+    "APIPod": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

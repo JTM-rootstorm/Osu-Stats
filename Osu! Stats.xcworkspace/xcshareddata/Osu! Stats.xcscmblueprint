@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A1069F035CBCA1086EE81948B5778A6DEA1D9A42",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A1069F035CBCA1086EE81948B5778A6DEA1D9A42" : 0,
+    "A61A4F90F33087C220FD8F25EEB0C022B1E055D4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "18A7B527-47E1-45CF-A377-32A841B69BE3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A1069F035CBCA1086EE81948B5778A6DEA1D9A42" : "Osu-Stats\/",
+    "A61A4F90F33087C220FD8F25EEB0C022B1E055D4" : "APIPod\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Osu! Stats",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Osu! Stats.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tehguy\/Osu-Stats.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A1069F035CBCA1086EE81948B5778A6DEA1D9A42"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tehguy\/APIPod.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A61A4F90F33087C220FD8F25EEB0C022B1E055D4"
+    }
+  ]
+}
