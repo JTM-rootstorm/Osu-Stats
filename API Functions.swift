@@ -3,23 +3,21 @@
 //  Osu! Stats
 //
 //  Created by erich on 7/8/15.
-//  Modified by Michael Justman on 3/7/16
+//  Heavily Modified by Michael Justman on 3/7/16 - 3/9/16
 //  Copyright © 2016 Chancellor Porter. All rights reserved.
 //
 // Official API documentation  https://github.com/ppy/osu-api/wiki
 
 
-//My Osu API Access Key is b842689a894e7c825998f2f3c490409bdd287af9&
-
-
 //   Example of how the Access URL is used in combination with Variables
-//https://osu.ppy.sh/api/get_user?k=b842689a894e7c825998f2f3c490409bdd287af9&u=lilchancep
+//https://osu.ppy.sh/api/get_user?k=API-KEY&u=lilchancep
 
 import Foundation
+import APIFramework
 
 class API_Functions{
     
-    private static var key = "?k=b842689a894e7c825998f2f3c490409bdd287af9&u="
+    private static var key = APIKey.getKey()
     
     class func getAPICall(api: String, completionHandler: (jData: JSON)->()) ->Bool{
         var output:String = ""
