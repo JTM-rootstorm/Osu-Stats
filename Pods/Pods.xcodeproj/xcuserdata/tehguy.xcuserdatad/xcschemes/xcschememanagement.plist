@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>APIPod-APIPod.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>APIPod.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EVReflection.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>015662EA39ECA0964A7D59A59E965477</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2DDA8B9132B07AE31354897F0CB4E909</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>64A8768D221CF9262439744ED93E4425</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A45DB8E70E478993DE0543BE4E042A43</key>
+		<key>D39326016C40AD614BCA0EA0387C8711</key>
 		<dict>
 			<key>primary</key>
 			<true/>

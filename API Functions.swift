@@ -13,7 +13,7 @@
 //https://osu.ppy.sh/api/get_user?k=API-KEY&u=lilchancep
 
 import Foundation
-import APIFramework
+import APIPod
 
 class API_Functions{
     
