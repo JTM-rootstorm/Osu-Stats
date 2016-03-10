@@ -95,4 +95,39 @@ class API_Functions{
         
         return true
     }
+    
+    class func LoadUserInfo(api_call: String) -> Bool{
+        
+        var validUser:Bool = false
+        
+        getAPICall(api_call){
+            jData in
+            
+            if (!jData.isEmpty){
+                UserInfo.userID = (jData[0]["user_id"].stringValue)
+                UserInfo.username = (jData[0]["username"].stringValue)
+                UserInfo.count300 = (jData[0]["count300"].stringValue)
+                UserInfo.count100 = (jData[0]["count100"].stringValue)
+                UserInfo.count50 = (jData[0]["count50"].stringValue)
+                UserInfo.playCount = (jData[0]["playcount"].stringValue)
+                UserInfo.ranked_score = (jData[0]["ranked_score"].stringValue)
+                UserInfo.total_score = (jData[0]["total_score"].stringValue)
+                UserInfo.pp_rank = (jData[0]["pp_rank"].stringValue)
+                UserInfo.level = (jData[0]["level"].stringValue)
+                UserInfo.pp_raw = (jData[0]["pp_raw"].stringValue)
+                UserInfo.accuracy = (jData[0]["accuracy"].stringValue)
+                UserInfo.count_rank_ss = (jData[0]["count_rank_ss"].stringValue)
+                UserInfo.count_rank_s = (jData[0]["count_rank_s"].stringValue)
+                UserInfo.count_rank_a = (jData[0]["count_rank_a"].stringValue)
+                UserInfo.country = (jData[0]["country"].stringValue)
+                UserInfo.pp_country_rank = (jData[0]["pp_country_rank"].stringValue)
+                validUser = true
+            }
+            else{
+                validUser = false
+            }
+        }
+        
+        return validUser
+    }
 }
