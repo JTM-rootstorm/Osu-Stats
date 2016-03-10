@@ -28,8 +28,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func Login(sender: UIButton){
-        UserInfo.username = (UsernameEntryBox.text!)
-        if(API_Functions.LoadUserInfo("get_user")){
+        API_Functions.getUser().username = (UsernameEntryBox.text!)
+        API_Functions.LoadUserInfo("get_user")
+        
+        if(!API_Functions.getUser().user_id.isEmpty){
             UsernameEntryBox.text = ""
             performSegueWithIdentifier("toMainStats", sender: self)
         }
