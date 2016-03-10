@@ -18,20 +18,21 @@ import APIFramework
 class API_Functions{
     
     private static var key = APIKey.getKey()
+    private static var user = User()
+    static var validUser:Bool = false
     
-    class func getAPICall(api: String, completionHandler: (jData: JSON)->()) ->Bool{
+    class func APICall(api: String) ->Bool{ //, completionHandler: (jData: JSON)->()
         var output:String = ""
         var URL = NSString(string:"https://osu.ppy.sh/api/").stringByAppendingString(api).stringByAppendingString(self.key)
         
-        if(UserInfo.username.isEmpty){
+        if(user.username.isEmpty){
             output = readFromFile(output)
         }
         else{
             if(!writeToFile()){
                 return false
             }
-            
-            output = UserInfo.username;
+            output = user.username;
         }
         
         URL = URL + output
@@ -39,12 +40,30 @@ class API_Functions{
         let session = NSURLSession.sharedSession()
         let loginURL = NSURL(string: URL)!
         
+        let semaphore = dispatch_semaphore_create(0)
+        
         let task = session.dataTaskWithURL(loginURL){(data, response, error) -> Void in
             let loginData = JSON(data: data!)
             
-            completionHandler(jData: loginData)
+            if(!loginData.isEmpty){
+                if let data = loginData[0].rawString(){
+                    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+                    
+                    dispatch_async(dispatch_get_global_queue(priority, 0)){
+                        self.user = User(json: data)
+                        validUser = true
+                        dispatch_semaphore_signal(semaphore)
+                    }
+                }
+            }
+            else{
+                validUser = false
+                dispatch_semaphore_signal(semaphore)
+            }
         }
         task.resume()
+        
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         
         return true
     }
@@ -81,7 +100,7 @@ class API_Functions{
         var error = NSError(domain: "somedomain", code: 123, userInfo: nil)
         let written:Bool
         do{
-            try UserInfo.username.writeToFile(writePath, atomically: true, encoding: NSUTF8StringEncoding)
+            try user.username.writeToFile(writePath, atomically: true, encoding: NSUTF8StringEncoding)
             written = true
         }
         catch let error1 as NSError{
@@ -94,5 +113,9 @@ class API_Functions{
         }
         
         return true
+    }
+    
+    class func getUser() ->User{
+        return user
     }
 }

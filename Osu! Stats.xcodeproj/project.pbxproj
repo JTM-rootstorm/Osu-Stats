@@ -16,11 +16,13 @@
 		7FC67E951C8C99B60023E637 /* Osu__StatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67E941C8C99B60023E637 /* Osu__StatsUITests.swift */; };
 		7FFE54B51C8E118B00FD4E33 /* API Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE54B41C8E118B00FD4E33 /* API Functions.swift */; };
 		FD0B6C2F1C8E1B4A002760CB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */; };
-		FD0B6C321C8E1DA7002760CB /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C311C8E1DA7002760CB /* UserInfo.swift */; };
 		FD0B6C341C8E1FD6002760CB /* Username.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD0B6C331C8E1FD6002760CB /* Username.txt */; };
 		FD0B6C361C8E39EC002760CB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C351C8E39EC002760CB /* InfoViewController.swift */; };
 		FD155CA41C90F66D00CB211E /* APIFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD155CA31C90F66D00CB211E /* APIFramework.framework */; };
 		FD155CA51C90F66D00CB211E /* APIFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD155CA31C90F66D00CB211E /* APIFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD8127071C913F2700F7CACA /* EVReflection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8127061C913F2700F7CACA /* EVReflection.framework */; };
+		FD8127081C913F2700F7CACA /* EVReflection.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FD8127061C913F2700F7CACA /* EVReflection.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FD81270B1C9153D000F7CACA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81270A1C9153D000F7CACA /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FD8127081C913F2700F7CACA /* EVReflection.framework in Embed Frameworks */,
 				FD155CA51C90F66D00CB211E /* APIFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -70,10 +73,12 @@
 		7FC67E961C8C99B60023E637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FFE54B41C8E118B00FD4E33 /* API Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API Functions.swift"; sourceTree = "<group>"; };
 		FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		FD0B6C311C8E1DA7002760CB /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		FD0B6C331C8E1FD6002760CB /* Username.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Username.txt; path = "Osu! Stats/Username.txt"; sourceTree = "<group>"; };
 		FD0B6C351C8E39EC002760CB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		FD155CA31C90F66D00CB211E /* APIFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = APIFramework.framework; path = lib/APIFramework.framework; sourceTree = "<group>"; };
+		FD8127061C913F2700F7CACA /* EVReflection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EVReflection.framework; path = lib/EVReflection.framework; sourceTree = "<group>"; };
+		FD8127091C913F3700F7CACA /* EVReflection LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = "EVReflection LICENSE"; path = "lib/EVReflection LICENSE"; sourceTree = "<group>"; };
+		FD81270A1C9153D000F7CACA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD8127071C913F2700F7CACA /* EVReflection.framework in Frameworks */,
 				FD155CA41C90F66D00CB211E /* APIFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,7 +111,7 @@
 		7FC67E681C8C99B60023E637 = {
 			isa = PBXGroup;
 			children = (
-				FD155CA31C90F66D00CB211E /* APIFramework.framework */,
+				FD8127011C91380000F7CACA /* Frameworks */,
 				7FFE54B31C8E116000FD4E33 /* Osu! API */,
 				7FC67E731C8C99B60023E637 /* Osu! Stats */,
 				7FC67E881C8C99B60023E637 /* Osu! StatsTests */,
@@ -172,7 +178,7 @@
 		7FFE54B61C8E11BA00FD4E33 /* /api/get_user */ = {
 			isa = PBXGroup;
 			children = (
-				FD0B6C311C8E1DA7002760CB /* UserInfo.swift */,
+				FD81270A1C9153D000F7CACA /* User.swift */,
 			);
 			name = /api/get_user;
 			sourceTree = "<group>";
@@ -205,6 +211,24 @@
 				FD0B6C331C8E1FD6002760CB /* Username.txt */,
 			);
 			name = "Shared Assets";
+			sourceTree = "<group>";
+		};
+		FD8127011C91380000F7CACA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD8127021C91388D00F7CACA /* Licenses */,
+				FD155CA31C90F66D00CB211E /* APIFramework.framework */,
+				FD8127061C913F2700F7CACA /* EVReflection.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD8127021C91388D00F7CACA /* Licenses */ = {
+			isa = PBXGroup;
+			children = (
+				FD8127091C913F3700F7CACA /* EVReflection LICENSE */,
+			);
+			name = Licenses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,9 +370,9 @@
 				7FC67E771C8C99B60023E637 /* ViewController.swift in Sources */,
 				7FC67E751C8C99B60023E637 /* AppDelegate.swift in Sources */,
 				7FFE54B51C8E118B00FD4E33 /* API Functions.swift in Sources */,
-				FD0B6C321C8E1DA7002760CB /* UserInfo.swift in Sources */,
 				FD0B6C361C8E39EC002760CB /* InfoViewController.swift in Sources */,
 				FD0B6C2F1C8E1B4A002760CB /* SwiftyJSON.swift in Sources */,
+				FD81270B1C9153D000F7CACA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +528,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lilchancep.Osu--Stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -527,6 +552,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lilchancep.Osu--Stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
