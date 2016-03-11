@@ -32,7 +32,7 @@ class API_Functions{
             if(!writeToFile()){
                 return false
             }
-            output = user.username;
+            output = user.username.stringByReplacingOccurrencesOfString(" ", withString: "");
         }
         
         URL = URL + output
