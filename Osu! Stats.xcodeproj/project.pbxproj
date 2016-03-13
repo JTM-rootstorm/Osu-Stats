@@ -16,7 +16,6 @@
 		7FC67E8A1C8C99B60023E637 /* Osu__StatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67E891C8C99B60023E637 /* Osu__StatsTests.swift */; };
 		7FC67E951C8C99B60023E637 /* Osu__StatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC67E941C8C99B60023E637 /* Osu__StatsUITests.swift */; };
 		7FFE54B51C8E118B00FD4E33 /* API Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFE54B41C8E118B00FD4E33 /* API Functions.swift */; };
-		FD0B6C2F1C8E1B4A002760CB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */; };
 		FD0B6C341C8E1FD6002760CB /* Username.txt in Resources */ = {isa = PBXBuildFile; fileRef = FD0B6C331C8E1FD6002760CB /* Username.txt */; };
 		FD0B6C361C8E39EC002760CB /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0B6C351C8E39EC002760CB /* InfoViewController.swift */; };
 		FD81270B1C9153D000F7CACA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81270A1C9153D000F7CACA /* User.swift */; };
@@ -70,7 +69,6 @@
 		7FC67E961C8C99B60023E637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FFE54B41C8E118B00FD4E33 /* API Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API Functions.swift"; sourceTree = "<group>"; };
 		DCE01B0E14881626C6BD60EC /* Pods-Osu! Stats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Osu! Stats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Osu! Stats/Pods-Osu! Stats.debug.xcconfig"; sourceTree = "<group>"; };
-		FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FD0B6C331C8E1FD6002760CB /* Username.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Username.txt; path = "Osu! Stats/Username.txt"; sourceTree = "<group>"; };
 		FD0B6C351C8E39EC002760CB /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		FD81270A1C9153D000F7CACA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				FD0B6C371C8E3C12002760CB /* Shared Assets */,
-				FD0B6C301C8E1B6D002760CB /* SwiftyJSON */,
 				7FFE54B41C8E118B00FD4E33 /* API Functions.swift */,
 				7FFE54B61C8E11BA00FD4E33 /* /api/get_user */,
 				7FFE54B81C8E11DB00FD4E33 /* /api/get_user_best */,
@@ -199,14 +196,6 @@
 			children = (
 			);
 			name = /api/get_user_best;
-			sourceTree = "<group>";
-		};
-		FD0B6C301C8E1B6D002760CB /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				FD0B6C2E1C8E1B4A002760CB /* SwiftyJSON.swift */,
-			);
-			name = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 		FD0B6C371C8E3C12002760CB /* Shared Assets */ = {
@@ -416,7 +405,6 @@
 				7FC67E751C8C99B60023E637 /* AppDelegate.swift in Sources */,
 				7FFE54B51C8E118B00FD4E33 /* API Functions.swift in Sources */,
 				FD0B6C361C8E39EC002760CB /* InfoViewController.swift in Sources */,
-				FD0B6C2F1C8E1B4A002760CB /* SwiftyJSON.swift in Sources */,
 				FD81270B1C9153D000F7CACA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

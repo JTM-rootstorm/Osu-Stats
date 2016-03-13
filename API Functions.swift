@@ -14,6 +14,8 @@
 
 import Foundation
 import APIPod
+import SwiftyJSON
+
 
 class API_Functions{
     
