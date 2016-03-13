@@ -5,6 +5,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/tehguy/APIPod.git'
 
+platform :ios, '8.0'
 use_frameworks!
 
 target 'Osu! Stats' do
