@@ -25,6 +25,8 @@ class API_Functions{
     
     class func APICall(api: String) ->Bool{ //, completionHandler: (jData: JSON)->()
         var output:String = ""
+        
+        //build url to use in API call
         var URL = NSString(string:"https://osu.ppy.sh/api/").stringByAppendingString(api).stringByAppendingString(self.key)
         
         if(user.username.isEmpty){
@@ -34,6 +36,8 @@ class API_Functions{
             if(!writeToFile()){
                 return false
             }
+            //remove spaces in username, crashes elsewise; probably can just throw an error when a space
+            // is found
             output = user.username.stringByReplacingOccurrencesOfString(" ", withString: "");
         }
         
@@ -51,6 +55,7 @@ class API_Functions{
                 if let data = loginData[0].rawString(){
                     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
                     
+                    //async thread call to update the User data and spit it out to our JSON cache
                     dispatch_async(dispatch_get_global_queue(priority, 0)){
                         self.user = User(json: data)
                         userToJSONFile()
@@ -79,6 +84,7 @@ class API_Functions{
         return username
     }
     
+    /** read username from text file for autopopulation of username field on next launch */
     private class func readFromFile(var output:String) -> String{
         let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
         let readPath = NSString(string: path).stringByAppendingPathComponent("Username.txt")
@@ -97,6 +103,7 @@ class API_Functions{
         return output
     }
     
+    /** write username to text file for autopopulation of username field on next launch */
     private class func writeToFile() -> Bool{
         let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
         let writePath = NSString(string: path).stringByAppendingPathComponent("Username.txt")
@@ -118,6 +125,7 @@ class API_Functions{
         return true
     }
     
+    /** output user data to JSON file as a cache so we don't have to call the API every time */
     class func userToJSONFile() ->Bool{
         let userFile = NSString(string: user.username).stringByAppendingString(".JSON")
         let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]

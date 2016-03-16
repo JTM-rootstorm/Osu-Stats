@@ -15,10 +15,16 @@ class InfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateLabels()
     }
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func updateLabels(){
+        lbl_username.text = API_Functions.getUser().username
+        lbl_pprank.text = API_Functions.getUser().pp_raw
     }
 }
