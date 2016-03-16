@@ -248,6 +248,18 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtM-n2-qqQ" userLabel="lbl_pprank">
+                                        <rect key="frame" x="135" y="87" width="116" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Global Rank:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMn-sg-tVN">
+                                        <rect key="frame" x="28" y="87" width="88" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVz-Q3-egr" userLabel="lbl_username">
                                         <rect key="frame" x="135" y="58" width="116" height="21"/>
                                         <constraints>
@@ -266,18 +278,6 @@
                                                 <include reference="2NM-hY-Oqa"/>
                                             </mask>
                                         </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtM-n2-qqQ" userLabel="lbl_pprank">
-                                        <rect key="frame" x="135" y="87" width="116" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Global Rank:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMn-sg-tVN">
-                                        <rect key="frame" x="28" y="87" width="88" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -300,8 +300,6 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="AVr-qQ-iPd"/>
-                                        <exclude reference="unO-Td-QdF"/>
                                         <exclude reference="AqI-Eb-ICE"/>
                                         <exclude reference="Gdc-BY-utK"/>
                                         <exclude reference="ms8-xh-gTy"/>
@@ -311,6 +309,8 @@
                                         <exclude reference="PSB-Ka-0PX"/>
                                         <exclude reference="Zal-8v-bk4"/>
                                         <exclude reference="jJh-3h-9g2"/>
+                                        <exclude reference="AVr-qQ-iPd"/>
+                                        <exclude reference="unO-Td-QdF"/>
                                         <exclude reference="QbF-7i-SzK"/>
                                         <exclude reference="5cL-PJ-KjU"/>
                                         <exclude reference="8TB-Fd-Bz3"/>
@@ -320,8 +320,6 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="AVr-qQ-iPd"/>
-                                        <include reference="unO-Td-QdF"/>
                                         <include reference="AqI-Eb-ICE"/>
                                         <include reference="Gdc-BY-utK"/>
                                         <include reference="ms8-xh-gTy"/>
@@ -331,6 +329,8 @@
                                         <include reference="PSB-Ka-0PX"/>
                                         <include reference="Zal-8v-bk4"/>
                                         <include reference="jJh-3h-9g2"/>
+                                        <include reference="AVr-qQ-iPd"/>
+                                        <include reference="unO-Td-QdF"/>
                                         <include reference="QbF-7i-SzK"/>
                                         <include reference="5cL-PJ-KjU"/>
                                         <include reference="8TB-Fd-Bz3"/>
