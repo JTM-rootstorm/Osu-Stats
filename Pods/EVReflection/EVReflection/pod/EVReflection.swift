@@ -58,7 +58,7 @@ final public class EVReflection {
             if !skipKey {
                 let mapping = keyMapping[k as! String]
                 let original:NSObject? = getValue(anyObject, key: mapping ?? k as! String)
-                if let dictValue = dictionaryAndArrayConversion(types[mapping ?? k as! String], original: original, dictValue: v) {
+                if let dictValue = dictionaryAndArrayConversion(anyObject, key: k as! String, fieldType: types[mapping ?? k as! String], original: original, dictValue: v) {
                     if let key:String = keyMapping[k as! String] {
                         setObjectValue(anyObject, key: key, value: dictValue, typeInObject: types[key])
                     } else {
@@ -248,7 +248,7 @@ final public class EVReflection {
      
      :returns: Nothing
      */
-    public class func encodeWithCoder(theObject: NSObject, aCoder: NSCoder) {
+    public class func encodeWithCoder(theObject: EVObject, aCoder: NSCoder) {
         let (hasKeys, _) = toDictionary(theObject, performKeyCleanup:false)
         for (key, value) in hasKeys {
             aCoder.encodeObject(value, forKey: key as! String)
@@ -261,16 +261,18 @@ final public class EVReflection {
      :parameter: theObject The object that we want to decode.
      :parameter: aDecoder The NSCoder that will be used for decoding the object.
      */
-    public class func decodeObjectWithCoder(theObject: NSObject, aDecoder: NSCoder) {
+    public class func decodeObjectWithCoder(theObject: EVObject, aDecoder: NSCoder) {
         let (hasKeys, _) = toDictionary(theObject, performKeyCleanup:false)
+        let dict = NSMutableDictionary()
         for (key, _) in hasKeys {
             if aDecoder.containsValueForKey(key as! String) {
                 let newValue: AnyObject? = aDecoder.decodeObjectForKey(key as! String)
                 if !(newValue is NSNull) {
-                    theObject.setValue(newValue, forKey: key as! String)
+                    dict[key as! String] = newValue
                 }
             }
         }
+        EVReflection.setPropertiesfromDictionary(dict, anyObject: theObject)
     }
     
     /**
@@ -367,6 +369,9 @@ final public class EVReflection {
     /// Variable that can be set using setBundleIdentifier
     private static var bundleIdentifier:String? = nil
     
+    /// Variable that can be set using setBundleIdentifiers
+    private static var bundleIdentifiers:[String]? = nil
+    
     /**
      This method can be used in unit tests to force the bundle where classes can be found
      
@@ -376,14 +381,35 @@ final public class EVReflection {
      */
     public class func setBundleIdentifier(forClass: AnyClass) {
         if let bundle:NSBundle = NSBundle(forClass:forClass) {
-            let appName = (bundle.infoDictionary![kCFBundleNameKey as String] as! String).characters.split(isSeparator: {$0 == "."}).map({ String($0) }).last ?? ""
-            //let appName = (bundle.bundleIdentifier!).characters.split(isSeparator: {$0 == "."}).map({ String($0) }).last ?? ""
-            let cleanAppName = appName
-                .stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
-                .stringByReplacingOccurrencesOfString("-", withString: "_", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
-            EVReflection.bundleIdentifier = cleanAppName
+            EVReflection.bundleIdentifier = bundleForClass(forClass, bundle: bundle)
         }
     }
+    
+    /**
+     This method can be used in project where models are split between multiple modules.
+     
+     :param: classes classes that that will be used to find the appName for in which we can find classes by string.
+     
+     :returns: Nothing
+     */
+    public class func setBundleIdentifiers(classes: Array<AnyClass>) {
+        bundleIdentifiers = []
+        for aClass in classes {
+            if let bundle:NSBundle = NSBundle(forClass:aClass) {
+                bundleIdentifiers?.append(bundleForClass(aClass, bundle: bundle))
+            }
+        }
+    }
+    
+    private static func bundleForClass(forClass: AnyClass, bundle: NSBundle) -> String {
+        let appName = (bundle.infoDictionary![kCFBundleNameKey as String] as! String).characters.split(isSeparator: {$0 == "."}).map({ String($0) }).last ?? ""
+        //let appName = (bundle.bundleIdentifier!).characters.split(isSeparator: {$0 == "."}).map({ String($0) }).last ?? ""
+        let cleanAppName = appName
+            .stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
+            .stringByReplacingOccurrencesOfString("-", withString: "_", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
+        return cleanAppName
+    }
+
     
     /// This dateformatter will be used when a conversion from string to NSDate is required
     private static var dateFormatter: NSDateFormatter? = nil
@@ -432,6 +458,20 @@ final public class EVReflection {
             let appName = getCleanAppName()
             classStringName = "\(appName).\(className)"
         }
+        
+        if let classStringName = NSClassFromString(classStringName) {
+            return classStringName
+        }
+        
+        if let bundleIdentifiers = bundleIdentifiers {
+            for aBundle in bundleIdentifiers {
+                let className = "\(aBundle).\(className)"
+                if let existingClass = NSClassFromString(className) {
+                    return existingClass
+                }
+            }
+        }
+        
         return NSClassFromString(classStringName)
     }
     
@@ -524,7 +564,7 @@ final public class EVReflection {
             }
         } else if mi.displayStyle == .Struct {
             valueType = "\(mi.subjectType)"
-            if valueType.containsString("_NativeDictionaryStorage<") {
+            if valueType.containsString("_NativeDictionaryStorage") {
                 if let dictionaryConverter = parentObject as? EVDictionaryConvertable {
                     let convertedValue = dictionaryConverter.convertDictionary(key!, dict: theValue)
                     return (convertedValue, valueType, false)
@@ -599,11 +639,9 @@ final public class EVReflection {
             //            }
         } else {
             if let (_, propertySetter, _) = (anyObject as? EVObject)?.propertyConverters().filter({$0.0 == key}).first {
-                
                 guard let propertySetter = propertySetter else {
                     return  // if the propertySetter is nil, skip setting the property
-                }
-                
+                }                
                 propertySetter(value)
                 return
             }            
@@ -751,7 +789,7 @@ final public class EVReflection {
      
      :returns: The converted value
      */
-    private static func dictionaryAndArrayConversion(fieldType:String?, original:NSObject?, var dictValue: AnyObject?) -> AnyObject? {
+    private static func dictionaryAndArrayConversion(anyObject:NSObject, key: String, fieldType:String?, original:NSObject?, var dictValue: AnyObject?) -> AnyObject? {
         if let type = fieldType {
             if type.hasPrefix("Array<") && dictValue as? NSDictionary != nil {
                 if (dictValue as! NSDictionary).count == 1 {
@@ -766,6 +804,8 @@ final public class EVReflection {
                     array.append(dictValue as! NSDictionary)
                     dictValue = array
                 }
+            } else if let _ = type.rangeOfString("_NativeDictionaryStorageOwner") ,  let dict = dictValue as? NSDictionary, let org = anyObject as? EVDictionaryConvertable {
+                dictValue = org.convertDictionary(key, dict: dict)
             } else if type != "NSDictionary" && dictValue as? NSDictionary != nil {
                 // Sub object
                 dictValue = dictToObject(type, original:original ,dict: dictValue as! NSDictionary)

@@ -1,6 +1,6 @@
 PODS:
   - APIPod (0.1.0)
-  - EVReflection (2.20.1)
+  - EVReflection (2.22.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -16,15 +16,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   APIPod:
-    :commit: 139715babe717f47f5ccf5e35ff1771fac9340a8
+    :commit: d910f5bead41d0ae98ae81f07166041022682878
     :git: https://github.com/tehguy/APIPod.git
   SwiftyJSON:
-    :commit: 42bdb102d2624b143c07850ebdc1537d5b6579b6
+    :commit: 2a5b70f06001316d4fb54501edc70b4084705da0
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   APIPod: 34b10c34c39c7fe21fc72709ff4818207f691654
-  EVReflection: b34b0d56971a98dfd55cf4cc0072d1b25759813b
+  EVReflection: a477e3e8387c720aba2838b0c8efdf62ee15eadb
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0
