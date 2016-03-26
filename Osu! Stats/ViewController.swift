@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     @IBAction func Login(sender: UIButton){
         API_Functions.getUser().username = (UsernameEntryBox.text!)
-        API_Functions.APICall("get_user")
+        API_Functions.getUserAPI()
         
         if(API_Functions.validUser){
             performSegueWithIdentifier("toMainStats", sender: self)
