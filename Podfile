@@ -12,13 +12,8 @@ target 'Osu! Stats' do
     pod 'EVReflection', '~> 2.6'
     pod 'APIPod', :git => 'https://github.com/tehguy/APIPod.git'
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
-end
+    pod 'Charts'
 
-target 'Osu! StatsTests' do
 
-end
-
-target 'Osu! StatsUITests' do
 
 end
-

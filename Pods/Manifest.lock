@@ -1,10 +1,14 @@
 PODS:
   - APIPod (0.1.0)
+  - Charts (2.2.3):
+    - Charts/Core (= 2.2.3)
+  - Charts/Core (2.2.3)
   - EVReflection (2.22.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - APIPod (from `https://github.com/tehguy/APIPod.git`)
+  - Charts
   - EVReflection (~> 2.6)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
@@ -24,6 +28,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   APIPod: 34b10c34c39c7fe21fc72709ff4818207f691654
+  Charts: f54267bb3f0f0e74520c6f248517cf5074dfd6fc
   EVReflection: a477e3e8387c720aba2838b0c8efdf62ee15eadb
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
