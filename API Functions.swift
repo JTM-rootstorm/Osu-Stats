@@ -23,39 +23,31 @@ class API_Functions{
     private static var user = User()
     static var validUser:Bool = false
     
-    class func APICall(api: String) ->Bool{ //, completionHandler: (jData: JSON)->()
-        var output:String = ""
+    class func getUserAPI() ->Bool{ //, completionHandler: (jData: JSON)->()
         
         //build url to use in API call
-        var URL = NSString(string:"https://osu.ppy.sh/api/").stringByAppendingString(api).stringByAppendingString(self.key)
+        var URL = NSString(string:"https://osu.ppy.sh/api/get_user").stringByAppendingString(self.key)
         
         if(user.username.isEmpty){
-            output = readFromFile(output)
+            return false
         }
         else{
             if(!writeToFile()){
                 return false
             }
-            //remove spaces in username, crashes elsewise; probably can just throw an error when a space
-            // is found
-            output = user.username.stringByReplacingOccurrencesOfString(" ", withString: "");
         }
         
-        URL = URL + output
-        
-        let session = NSURLSession.sharedSession()
-        let loginURL = NSURL(string: URL)!
+        URL = URL + user.username.stringByReplacingOccurrencesOfString(" ", withString: "");
         
         let semaphore = dispatch_semaphore_create(0)
         
-        let task = session.dataTaskWithURL(loginURL){(data, response, error) -> Void in
-            let loginData = JSON(data: data!)
+        APICall(URL){
+            jData in
             
-            if(!loginData.isEmpty){
-                if let data = loginData[0].rawString(){
+            if(!jData.isEmpty){
+                if let data = jData[0].rawString(){
                     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
                     
-                    //async thread call to update the User data and spit it out to our JSON cache
                     dispatch_async(dispatch_get_global_queue(priority, 0)){
                         self.user = User(json: data)
                         userToJSONFile()
@@ -69,10 +61,30 @@ class API_Functions{
                 dispatch_semaphore_signal(semaphore)
             }
         }
-        task.resume()
         
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         
+        return true
+    }
+    
+    class func getUserBest() ->Bool{
+        var URL = NSString(string:"https://osu.ppy.sh/api/get_user_best").stringByAppendingString(self.key)
+        URL = URL + user.username.stringByReplacingOccurrencesOfString(" ", withString: "");
+        
+        let semaphore = dispatch_semaphore_create(0)
+        
+        APICall(URL){
+            jData in
+            
+            if(!jData.isEmpty){
+                
+            }
+            else{
+                dispatch_semaphore_signal(semaphore)
+            }
+        }
+        
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         return true
     }
     
@@ -82,6 +94,18 @@ class API_Functions{
         username = readFromFile(username)
         
         return username
+    }
+    
+    private class func APICall(URL:String, completionHandler: (jData: JSON)->()){
+        let session = NSURLSession.sharedSession()
+        let loginURL = NSURL(string: URL)!
+        
+        let task = session.dataTaskWithURL(loginURL){(data, response, error) -> Void in
+            let loginData = JSON(data: data!)
+            
+            completionHandler(jData: loginData)
+        }
+        task.resume()
     }
     
     /** read username from text file for autopopulation of username field on next launch */
