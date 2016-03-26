@@ -85,7 +85,8 @@ class API_Functions{
     }
     
     /** read username from text file for autopopulation of username field on next launch */
-    private class func readFromFile(var output:String) -> String{
+    private class func readFromFile(out:String) -> String{
+        var output = out
         let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
         let readPath = NSString(string: path).stringByAppendingPathComponent("Username.txt")
         let readFile = (try? NSString(contentsOfFile: readPath, encoding: NSUTF8StringEncoding)) as? String
