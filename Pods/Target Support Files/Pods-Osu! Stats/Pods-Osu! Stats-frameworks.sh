@@ -85,11 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Osu! Stats/APIPod.framework"
+  install_framework "Pods-Osu! Stats/Charts.framework"
   install_framework "Pods-Osu! Stats/EVReflection.framework"
   install_framework "Pods-Osu! Stats/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Osu! Stats/APIPod.framework"
+  install_framework "Pods-Osu! Stats/Charts.framework"
   install_framework "Pods-Osu! Stats/EVReflection.framework"
   install_framework "Pods-Osu! Stats/SwiftyJSON.framework"
 fi
