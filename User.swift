@@ -28,4 +28,6 @@ class User: EVObject{
     var country: String = ""
     var pp_country_rank: String = ""
     var events: [String] = []
+    
+    var best: [AnyObject] = []
 }

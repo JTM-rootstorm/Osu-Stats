@@ -77,7 +77,8 @@ class API_Functions{
             jData in
             
             if(!jData.isEmpty){
-                
+                self.user.best = jData.arrayObject!
+                dispatch_semaphore_signal(semaphore)
             }
             else{
                 dispatch_semaphore_signal(semaphore)

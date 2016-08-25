@@ -33,6 +33,10 @@ class ViewController: UIViewController {
         API_Functions.getUserAPI()
         
         if(API_Functions.validUser){
+            API_Functions.getUserBest()
+            
+            print(API_Functions.getUser().best[0])
+            
             performSegueWithIdentifier("toMainStats", sender: self)
         }
         else{
