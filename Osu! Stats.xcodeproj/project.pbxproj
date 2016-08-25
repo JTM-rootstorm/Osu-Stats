@@ -553,7 +553,7 @@
 					Stats,
 				);
 				INFOPLIST_FILE = "Osu! Stats/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lilchancep.Osu--Stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -573,7 +573,7 @@
 					Stats,
 				);
 				INFOPLIST_FILE = "Osu! Stats/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lilchancep.Osu--Stats";
 				PRODUCT_NAME = "$(TARGET_NAME)";

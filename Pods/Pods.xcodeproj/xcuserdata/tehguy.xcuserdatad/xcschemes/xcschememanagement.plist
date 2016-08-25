@@ -23,6 +23,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>EVReflection.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -60,12 +65,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3E33C2899DA0676F9E22D1A177496C28</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6269EBB170361EC25E1C3E3598B3826F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>642B49994EC61F6EAA72B78514101C3A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>64A8768D221CF9262439744ED93E4425</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6828C2508515BC0428D6BDAA1292DC9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
